@@ -34,7 +34,7 @@ export const ApresentationTitle = styled.div`
 export const ContentContainer = styled.div`
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
     gap: 1rem;
     height: 100%;
     justify-content: space-between;
@@ -107,13 +107,14 @@ export const SliderContainer = styled.div`
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
     span{
         font-size: 2rem;
         text-align: right;
-        padding-right: 1rem;
+        padding-right: 2rem;
 
         animation: ${myAppear} 1s linear;
         animation-timeline: view();
