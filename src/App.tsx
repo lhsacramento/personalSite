@@ -21,7 +21,7 @@ function App() {
           </MenuContainer>
 
           <HomeContent>
-            <p>Aos 27 anos, percebo que desenvolver não 
+            <p>{innerWidth} - {innerHeight} Aos 27 anos, percebo que desenvolver não 
             se resume a programar. É, antes de tudo, 
             sobre impactar vidas. A tecnologia mudou 
             radicalmente nossa existência. 
