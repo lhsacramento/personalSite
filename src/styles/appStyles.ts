@@ -1,4 +1,4 @@
-import {styled} from "styled-components";
+import {keyframes, styled} from "styled-components";
 
 export const MainContainer = styled.div`
     position: fixed;
@@ -58,6 +58,9 @@ export const MenuContainer = styled.div`
 `
 
 export const HomeContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     p{
         height: 100%;
@@ -71,6 +74,10 @@ export const HomeContent = styled.div`
         justify-content: end;
         max-width: 16rem;
     }
+
+    div{
+        color: white;
+    }
 `
 
 export const ButtonMenu = styled.button`
@@ -83,10 +90,37 @@ export const ButtonMenu = styled.button`
         scale: 1.1;
     }
 `
+const myAppear = keyframes`
+    0%,100%{
+        opacity: 0;
+        translate: 30vw 0;
+    }
 
-export const SelectedIndicator = styled.div`
-   height : 0.8rem;
-   width: 0.8rem;
-   background-color: white;
-   border-radius: 9999px;
+    50%{
+        opacity: 1;
+        translate: 0 0;
+    }
 `
+
+export const SliderContainer = styled.div`
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    span{
+        font-size: 2rem;
+        text-align: right;
+        padding-right: 1rem;
+
+        animation: ${myAppear} 1s linear;
+        animation-timeline: view();
+    }
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
+`
+
