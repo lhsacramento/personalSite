@@ -61,7 +61,7 @@ export const HomeContent = styled.div`
     flex-direction: column;
     justify-content: flex-end;
 
-    p{
+    #PPP{
         height: 100%;
         color: white;
         font-size: 1rem;
@@ -114,18 +114,30 @@ export const SliderContainer = styled.div`
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    a{
-        cursor: pointer;
-        font-size: 1.3rem;
-        text-align: right;
-        padding-right: 2rem;
-
-        animation: ${myAppear} 1s linear;
-        animation-timeline: view();
-    }
-
     ::-webkit-scrollbar{
         display: none;
     }
 `
 
+interface SlideProjectProps{
+    empty? : true;
+}
+
+export const SlideProject = styled.a<SlideProjectProps>`
+    cursor: ${props => props.empty ? 'pointer' : null};
+    text-align: right;
+    padding-right: 2rem;
+    width: 100%;
+    animation: ${myAppear} 1s linear;
+    animation-timeline: view();
+    display: block; 
+
+    h3{
+            font-size: 1.5rem;
+        }
+
+    p{
+        width: 100%;
+        font-size: 0.5rem;
+    }
+`
