@@ -30,33 +30,20 @@ function App() {
           */}          
 
           <SliderContainer>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span>Estudio Pet</span>
-            <span>Estudio Pet2</span>
-            <span>Estudio Pet3</span>
-            <span>Estudio Pet4</span>
-            <span>Estudio Pet5</span>
-            <span>Estudio Pet6</span>
-            <span>Estudio Pet7</span>
-            <span>Estudio Pet8</span>
-            <span>Estudio Pet9</span>
-            <span>Estudio Pet10</span>
-            <span>Estudio Pet11</span>
-            <span>Estudio Pet12</span>
-            <span>Estudio Pet13</span>
-            <span>Estudio Pet14</span>
-            <span>Estudio Pet15</span>
-            <span>Estudio Pet16</span>
-            <span>Estudio Pet17</span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
-            <span> </span>
+            <a> </a>
+            <a> </a>
+            <a> </a>
+            <a> </a>
+            <a>Estúdio Pet - Landing Page</a>
+            <a>{innerWidth}</a>
+            <a>Estudio Pet3</a>
+            <a>Estudio Pet4</a>
+            <a>Estudio Pet5</a>
+            <a>Estudio Pet6</a>
+            <a> </a>
+            <a> </a>
+            <a> </a>
+            <a> </a>
           </SliderContainer>
           
           </HomeContent>  

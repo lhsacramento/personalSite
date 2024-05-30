@@ -33,9 +33,8 @@ export const ApresentationTitle = styled.div`
 
 export const ContentContainer = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 1rem 0 1rem 1rem;
-    gap: 1rem;
     height: 100%;
     justify-content: space-between;
 `
@@ -94,11 +93,15 @@ const myAppear = keyframes`
     0%,100%{
         opacity: 0;
         translate: 30vw 0;
+        scale: 0.1;
+        font-weight: normal;
     }
 
     50%{
         opacity: 1;
         translate: 0 0;
+        scale: 1;
+        font-weight: bold;
     }
 `
 
@@ -111,8 +114,9 @@ export const SliderContainer = styled.div`
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    span{
-        font-size: 2rem;
+    a{
+        cursor: pointer;
+        font-size: 1.3rem;
         text-align: right;
         padding-right: 2rem;
 
