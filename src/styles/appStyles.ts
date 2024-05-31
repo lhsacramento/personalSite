@@ -36,7 +36,6 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     padding: 1rem 0 1rem 1rem;
     height: 100%;
-    justify-content: space-evenly;
     overflow-y: hidden;
 `
 
@@ -57,11 +56,20 @@ export const MenuContainer = styled.div`
     }
 `
 
+export const HomeContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+`
+
 export const HomeContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: end;
+    width: 100%;
 
     .homeParagraph{
         height: 100%;
