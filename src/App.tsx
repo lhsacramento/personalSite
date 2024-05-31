@@ -66,13 +66,13 @@ function App() {
                 <SlideProject> </SlideProject>
                 <SlideProject> </SlideProject>
                 <SlideProject> </SlideProject>
-                <SlideProject>
+                <SlideProject href="#">
                   <h3>Estúdio Pet - Site</h3>
-                  <p>React + Typescript + Vite + Leaflet (mapas) + Styledcomponent + Html5 + Css</p>
+                  <p>React + Typescript + Vite + Leaflet (mapas) + Styledcomponent</p>
                 </SlideProject>
                 <SlideProject>
                   <h3>Meu Site</h3>
-                  <p>React + Typescript + Vite + Styledcomponent + Animations + Html5 + Css</p>
+                  <p>React + Typescript + Vite + Styledcomponent + Animations</p>
                 </SlideProject>
                 <SlideProject>
                   <h3>Coffee Delivery</h3>
@@ -84,7 +84,7 @@ function App() {
                 </SlideProject>
                 <SlideProject>
                   <h3>Pomo-Timer</h3>
-                  <p>React + Vite + Typescript + React-router-dom + Date-fns + React-hook-form</p>
+                  <p>React + Vite + Typescript + React-router-dom + Date-fns</p>
                 </SlideProject>
                 <SlideProject>
                   <h3>Keys Controller</h3>

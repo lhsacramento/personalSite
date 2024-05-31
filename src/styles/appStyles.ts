@@ -96,15 +96,13 @@ export const ButtonMenu = styled.button`
 const myAppear = keyframes`
     0%,100%{
         opacity: 0;
-        translate: 50vw 0;
-        scale: 0.1;
+        translate: 30vw 0;
         font-weight: normal;
     }
 
     50%{
         opacity: 1;
-        translate: -5vw 0;
-        scale: 1;
+        translate: -6vw 0;
         font-weight: bold;
     }
 `
@@ -112,6 +110,7 @@ const myAppear = keyframes`
 export const SliderContainer = styled.div`
     height: 18rem;
     display: flex;
+    width: 100%;
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -128,6 +127,8 @@ interface SlideProjectProps{
 }
 
 export const SlideProject = styled.a<SlideProjectProps>`
+    text-decoration: none;
+    color: white;
     cursor: ${props => props.empty ? 'pointer' : null};
     text-align: right;
     width: 100%;
