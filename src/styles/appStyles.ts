@@ -37,6 +37,7 @@ export const ContentContainer = styled.div`
     padding: 1rem 0 1rem 1rem;
     height: 100%;
     justify-content: space-between;
+    overflow-y: hidden;
 `
 
 export const MenuContainer = styled.div`
@@ -135,6 +136,7 @@ export const SlideProject = styled.a<SlideProjectProps>`
     animation: ${myAppear} 1s linear;
     animation-timeline: view();
     display: block; 
+    margin-top: 1rem;
 
     h3{
             font-size: 1.5rem;

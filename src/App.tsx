@@ -59,10 +59,7 @@ function App() {
             }          
 
             {page === 'projects' &&
-              <SliderContainer>
-                <SlideProject> </SlideProject>
-                <SlideProject> </SlideProject>
-                <SlideProject> </SlideProject>          
+              <SliderContainer>     
                 <SlideProject> </SlideProject>
                 <SlideProject> </SlideProject>
                 <SlideProject> </SlideProject>
@@ -92,10 +89,8 @@ function App() {
                 </SlideProject>
                 <SlideProject> </SlideProject>
                 <SlideProject> </SlideProject>
-                <SlideProject> </SlideProject>          
-                <SlideProject> </SlideProject>
-                <SlideProject> </SlideProject>
-                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>    
+                <SlideProject> </SlideProject>    
               </SliderContainer>
             }
           
