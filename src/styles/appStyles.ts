@@ -60,8 +60,9 @@ export const HomeContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: end;
 
-    #PPP{
+    .homeParagraph{
         height: 100%;
         color: white;
         font-size: 1rem;
@@ -71,7 +72,9 @@ export const HomeContent = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: end;
-        max-width: 16rem;
+        max-width: 13rem;
+        width: 100%;
+        margin-right: 1rem;
     }
 
     div{
@@ -89,17 +92,18 @@ export const ButtonMenu = styled.button`
         scale: 1.1;
     }
 `
+
 const myAppear = keyframes`
     0%,100%{
         opacity: 0;
-        translate: 30vw 0;
+        translate: 50vw 0;
         scale: 0.1;
         font-weight: normal;
     }
 
     50%{
         opacity: 1;
-        translate: 0 0;
+        translate: -5vw 0;
         scale: 1;
         font-weight: bold;
     }
@@ -126,7 +130,6 @@ interface SlideProjectProps{
 export const SlideProject = styled.a<SlideProjectProps>`
     cursor: ${props => props.empty ? 'pointer' : null};
     text-align: right;
-    padding-right: 2rem;
     width: 100%;
     animation: ${myAppear} 1s linear;
     animation-timeline: view();
@@ -140,4 +143,11 @@ export const SlideProject = styled.a<SlideProjectProps>`
         width: 100%;
         font-size: 0.5rem;
     }
+`
+
+export const SelectedButton = styled.span`
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 9999px;
 `

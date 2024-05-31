@@ -1,7 +1,15 @@
 import { GlobalStyles } from "./styles/globalStyle"
-import { ApresentationTitle, ButtonMenu, ContentContainer, HomeContent, MainContainer, MenuContainer, SlideProject, SliderContainer} from "./styles/appStyles"
+import { ApresentationTitle, ButtonMenu, ContentContainer, HomeContent, MainContainer, MenuContainer, SelectedButton, SlideProject, SliderContainer} from "./styles/appStyles"
+import { useState } from "react";
+
 
 function App() {  
+
+  const [page, setPage] = useState("home");;
+  function handleChangePage(nextPage: string){
+    setPage(nextPage);
+  }
+
   return (    
     <>
       <GlobalStyles />
@@ -14,80 +22,82 @@ function App() {
 
         <ContentContainer>
           <MenuContainer>
-            <ButtonMenu>Início</ButtonMenu>
-            <ButtonMenu>Projetos</ButtonMenu>
-            <ButtonMenu>Sobre</ButtonMenu>
-            <ButtonMenu>Contato</ButtonMenu>
+            <ButtonMenu onClick={() => {handleChangePage('home')}}>
+              {page === 'home' && 
+              <SelectedButton />
+              }
+              Início
+            </ButtonMenu>
+
+            <ButtonMenu onClick={() => {handleChangePage('projects')}}>
+              {page === 'projects' &&
+                <SelectedButton/>
+              }
+              Projetos
+            </ButtonMenu>
+            <ButtonMenu onClick={() => {handleChangePage('about')}}>
+              {page === 'about' &&
+                <SelectedButton/>
+              }
+              Sobre
+            </ButtonMenu>
+            <ButtonMenu onClick={() => {handleChangePage('contact')}}>
+              {page === 'contact' &&
+                <SelectedButton/>
+              }
+              Contato
+            </ButtonMenu>
           </MenuContainer>
 
           <HomeContent>
-          {/*
-            <p>Aos 27 anos, percebo que desenvolver não 
-            se resume a programar. É, antes de tudo, 
-            sobre impactar vidas. A tecnologia mudou 
-            radicalmente nossa existência. 
-            E o que virá em seguida?</p>
-          */}          
+            {page === 'home' &&
+              <p className="homeParagraph">Aos 27 anos, percebo que desenvolver não 
+              se resume a programar. É, antes de tudo, 
+              sobre impactar vidas. A tecnologia mudou 
+              radicalmente nossa existência. 
+              E o que virá em seguida?</p>
+            }          
 
-          {/*<SliderContainer>
-            <a> </a>
-            <a> </a>
-            <a> </a>
-            <a> </a>
-            <a>
-              <h3>Estúdio Pet - Site</h3>
-              <span>Typescript + Vite + Styled aaaaaaaa aaaaaaaaaa Components + Html + Css</span>
-            </a>
-            <a>{innerWidth}</a>
-            <a>Estudio Pet3</a>
-            <a>Estudio Pet4</a>
-            <a>Estudio Pet5</a>
-            <a>Estudio Pet6</a>
-            <a> </a>
-            <a> </a>
-            <a> </a>
-            <a> </a>
-        </SliderContainer>*/}
-
-
-        <SliderContainer>
-          <SlideProject> </SlideProject>
-          <SlideProject> </SlideProject>
-          <SlideProject> </SlideProject>          
-          <SlideProject> </SlideProject>
-          <SlideProject> </SlideProject>
-          <SlideProject> </SlideProject>
-          <SlideProject>
-            <h3>Estúdio Pet - Site</h3>
-            <p>React + Typescript + Vite + Leaflet (mapas) + Styledcomponent + Html5 + Css</p>
-          </SlideProject>
-          <SlideProject>
-            <h3>Meu Portifólio</h3>
-            <p>React + Typescript + Vite + Styledcomponent + Animations + Html5 + Css</p>
-          </SlideProject>
-          <SlideProject>
-            <h3>Coffee Delivery</h3>
-            <p>React + Typescript + React-router-dom + React-hook-form + Imask</p>
-          </SlideProject>
-          <SlideProject>
-            <h3>DT-Money</h3>
-            <p>React + Typescript + Radix + Zod + React-hook-form + Axios + Imask</p>
-          </SlideProject>
-          <SlideProject>
-            <h3>Pomo-Timer</h3>
-            <p>React + Vite + Typescript + React-router-dom + Date-fns + React-hook-form</p>
-          </SlideProject>
-          <SlideProject>
-            <h3>Keys Controller</h3>
-            <p>Flutter + Dart</p>
-          </SlideProject>
-          <SlideProject> </SlideProject>
-          <SlideProject> </SlideProject>
-          <SlideProject> </SlideProject>          
-          <SlideProject> </SlideProject>
-          <SlideProject> </SlideProject>
-          <SlideProject> </SlideProject>
-        </SliderContainer>
+            {page === 'projects' &&
+              <SliderContainer>
+                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>          
+                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>
+                <SlideProject>
+                  <h3>Estúdio Pet - Site</h3>
+                  <p>React + Typescript + Vite + Leaflet (mapas) + Styledcomponent + Html5 + Css</p>
+                </SlideProject>
+                <SlideProject>
+                  <h3>Meu Site</h3>
+                  <p>React + Typescript + Vite + Styledcomponent + Animations + Html5 + Css</p>
+                </SlideProject>
+                <SlideProject>
+                  <h3>Coffee Delivery</h3>
+                  <p>React + Typescript + React-router-dom + React-hook-form + Imask</p>
+                </SlideProject>
+                <SlideProject>
+                  <h3>DT-Money</h3>
+                  <p>React + Typescript + Radix + Zod + React-hook-form + Axios + Imask</p>
+                </SlideProject>
+                <SlideProject>
+                  <h3>Pomo-Timer</h3>
+                  <p>React + Vite + Typescript + React-router-dom + Date-fns + React-hook-form</p>
+                </SlideProject>
+                <SlideProject>
+                  <h3>Keys Controller</h3>
+                  <p>Flutter + Dart</p>
+                </SlideProject>
+                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>          
+                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>
+                <SlideProject> </SlideProject>
+              </SliderContainer>
+            }
           
           </HomeContent>  
         </ContentContainer>
