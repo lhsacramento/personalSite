@@ -36,7 +36,7 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     padding: 1rem 0 1rem 1rem;
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     overflow-y: hidden;
 `
 
