@@ -1,6 +1,10 @@
 import { GlobalStyles } from "./styles/globalStyle"
-import { ApresentationTitle, ButtonMenu, ContentContainer, HomeContainer, HomeContent, MainContainer, MenuContainer, SelectedButton, SlideProject, SliderContainer} from "./styles/appStyles"
+import { ApresentationTitle, ButtonMenu, ContactContainer, 
+         ContentContainer, HomeContainer, HomeContent, 
+         MainContainer, MenuContainer, SelectedButton, 
+         SlideProject, SliderContainer} from "./styles/appStyles"
 import { useState } from "react";
+import { LinkedinLogo, GithubLogo, At } from "@phosphor-icons/react";
 
 
 function App() {  
@@ -68,23 +72,23 @@ function App() {
                     <h3>Estúdio Pet - Site</h3>
                     <p>React + Typescript + Vite + Leaflet (mapas) + Styledcomponent</p>
                   </SlideProject>
-                  <SlideProject>
+                  <SlideProject href="#">
                     <h3>Meu Site</h3>
                     <p>React + Typescript + Vite + Styledcomponent + Animations</p>
                   </SlideProject>
-                  <SlideProject>
+                  <SlideProject href="#">
                     <h3>Coffee Delivery</h3>
                     <p>React + Typescript + React-router-dom + React-hook-form + Imask</p>
                   </SlideProject>
-                  <SlideProject>
+                  <SlideProject href="#">
                     <h3>DT-Money</h3>
                     <p>React + Typescript + Radix + Zod + React-hook-form + Axios + Imask</p>
                   </SlideProject>
-                  <SlideProject>
+                  <SlideProject href="#">
                     <h3>Pomo-Timer</h3>
                     <p>React + Vite + Typescript + React-router-dom + Date-fns</p>
                   </SlideProject>
-                  <SlideProject>
+                  <SlideProject href="#">
                     <h3>Keys Controller</h3>
                     <p>Flutter + Dart</p>
                   </SlideProject>
@@ -93,6 +97,32 @@ function App() {
                   <SlideProject> </SlideProject>    
                   <SlideProject> </SlideProject>    
                 </SliderContainer>
+              }
+
+              {page === 'about' &&
+              
+                <p>
+                </p>
+              }
+
+              {page === 'contact' &&
+                
+                <ContactContainer>
+                  <div>
+                    <a href="https://www.linkedin.com/in/lhsacramento/" target="_blanc">Linkedin/Lhsacramento</a>
+                    <LinkedinLogo size={25}/>                    
+                  </div>
+
+                  <div>
+                    <a href="https://github.com/lhsacramento" target="_blanc">Github/Lhsacramento</a>
+                    <GithubLogo size={25}/>                    
+                  </div>
+
+                  <div>
+                    <span id='email' onClick={() => {}}>LuizSacramento.tds@gmail.com</span>
+                    <At size={25}/>                    
+                  </div>
+                </ContactContainer>
               }
             
             </HomeContent>  

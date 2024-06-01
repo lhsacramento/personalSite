@@ -63,15 +63,23 @@ export const HomeContainer = styled.div`
     align-items: center;
     justify-content: flex-end;
 `
+const contentApper = keyframes`
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+`
 
 export const HomeContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: end;
-    width: 100%;
+    width: 100%;    
 
-    .homeParagraph{
+    .homeParagraph{        
+        animation: ${contentApper} 1s linear;
         height: 100%;
         color: white;
         font-size: 1rem;
@@ -161,4 +169,25 @@ export const SelectedButton = styled.span`
     width: 10px;
     background-color: white;
     border-radius: 9999px;
+`
+
+
+
+export const ContactContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    animation: ${contentApper} 1s linear;
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    a{
+        color: white;
+        text-decoration: underline;
+    }
 `
