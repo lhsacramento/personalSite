@@ -1,5 +1,5 @@
 import { GlobalStyles } from "./styles/globalStyle"
-import { ApresentationTitle, ButtonMenu, ContactContainer, 
+import { AboutContainer, ApresentationTitle, ButtonMenu, ContactContainer, 
          ContentContainer, HomeContainer, HomeContent, 
          MainContainer, MenuContainer, SelectedButton, 
          SlideProject, SliderContainer} from "./styles/appStyles"
@@ -101,8 +101,64 @@ function App() {
 
               {page === 'about' &&
               
-                <p>
-                </p>
+              <AboutContainer>
+                <h2>Sobre Mim</h2>
+                <p>Olá, meu nome é Luiz Henrique. 
+                  Sou um entusiasta da tecnologia 
+                  residente no Rio de Janeiro, 
+                  com 27 anos de idade. Minha jornada 
+                  na programação começou aos 15 anos, 
+                  quando ingressei no ensino médio 
+                  técnico em programação de jogos digitais. 
+                  Durante esse período, tive o privilégio 
+                  de aprender com pessoas incríveis e desenvolver 
+                  habilidades fundamentais.</p>
+
+                <p>Minha experiência inicial incluiu a programação 
+                  com JavaScript para web e Unity, C# para 
+                  desktop e Unity, além de Java (POO) para mobile (utilizando 
+                  Eclipse e Android Studio). Após anos dedicados
+                  a projetos pessoais, ingressei no setor 
+                  militar através de um concurso, mas nunca 
+                  deixei de lado minha paixão pela tecnologia. 
+                  Mesmo na carreira militar, continuei meus estudos e iniciei a faculdade de Análise e 
+                  Desenvolvimento de Sistemas.</p>
+
+                <p>Hoje, estou determinado a me dedicar integralmente 
+                  à área de tecnologia, a qual reconheço como minha 
+                  verdadeira vocação. Tenho especialização em 
+                  desenvolvimento web, utilizando JavaScript e 
+                  TypeScript com foco em React, além de trabalhar 
+                  com outras tecnologias como React Native e Flutter 
+                  (Dart). Meu objetivo atual é me tornar um desenvolvedor 
+                  Fullstack completo, aprofundando meus conhecimentos em Java.</p>
+                    
+                <h2>Minhas Soft Skills</h2>
+                <ul>
+                  <li>
+                    <p>
+                      <strong>Aprendizado Autodidata:</strong> Tenho facilidade em 
+                      aprender sozinho e busco constantemente entender
+                      e aprender mais sobre as tecnologias com as quais trabalho.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Disciplina:</strong> Minha experiência na vida militar me 
+                      proporcionou uma forte disciplina, tanto pessoal 
+                      quanto profissional.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Trabalho em Equipe:</strong> Valorizo o trabalho em equipe e 
+                      aprecio discutir e ouvir diferentes opiniões sobre o 
+                      mesmo assunto, pois acredito que isso enriquece o 
+                      desenvolvimento de soluções.
+                    </p>
+                  </li>
+                </ul>
+              </AboutContainer>
               }
 
               {page === 'contact' &&

@@ -62,6 +62,8 @@ export const HomeContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    max-height: 100%;
+    overflow-y: hidden;
 `
 const contentApper = keyframes`
     from{
@@ -171,13 +173,25 @@ export const SelectedButton = styled.span`
     border-radius: 9999px;
 `
 
+export const AboutContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 200px;
+    padding: 0 1rem;
+    gap: 1rem;
+    width: 100%;
+    text-align: right;
 
+    animation: ${contentApper} 1s linear;
+`
 
 export const ContactContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: end;
     animation: ${contentApper} 1s linear;
+    padding: 0 0.5rem;
 
     div{
         display: flex;
