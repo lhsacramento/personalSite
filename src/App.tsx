@@ -9,10 +9,41 @@ import "./styles/background.css";
 
 
 function App() {  
+  const [page, setPage] = useState("home");
+  const [btHome, setBtHome] = useState(true);
+  const [btProjects, setBtProjects] = useState(false);
+  const [btAbout, setBtAbout] = useState(false);
+  const [btContact, setBtContact] = useState(false);
 
-  const [page, setPage] = useState("home");;
   function handleChangePage(nextPage: string){
     setPage(nextPage);
+
+    switch(nextPage){
+      case "home":
+        setBtHome(true);
+        setBtProjects(false);
+        setBtAbout(false);
+        setBtContact(false);
+        break;
+      case "projects":
+        setBtHome(false);
+        setBtProjects(true);
+        setBtAbout(false);
+        setBtContact(false);
+        break;
+      case "about":
+        setBtHome(false);
+        setBtProjects(false);
+        setBtAbout(true);
+        setBtContact(false);
+        break;
+      case "contact":
+        setBtHome(false);
+        setBtProjects(false);
+        setBtAbout(false);
+        setBtContact(true);
+        break;
+    }
   }
 
   return (    
@@ -81,26 +112,26 @@ function App() {
 
         <ContentContainer>
           <MenuContainer>
-            <ButtonMenu onClick={() => {handleChangePage('home')}}>
+            <ButtonMenu onClick={() => {handleChangePage('home')}} selectedButton={btHome}>
               {page === 'home' && 
-              <SelectedButton />
+                <SelectedButton />
               }
               Início
             </ButtonMenu>
 
-            <ButtonMenu onClick={() => {handleChangePage('projects')}}>
+            <ButtonMenu id="btnprojects" onClick={() => {handleChangePage('projects')}} selectedButton={btProjects}>
               {page === 'projects' &&
                 <SelectedButton/>
               }
               Projetos
             </ButtonMenu>
-            <ButtonMenu onClick={() => {handleChangePage('about')}}>
+            <ButtonMenu id="btnabout" onClick={() => {handleChangePage('about')}} selectedButton={btAbout}>
               {page === 'about' &&
                 <SelectedButton/>
               }
               Sobre
             </ButtonMenu>
-            <ButtonMenu onClick={() => {handleChangePage('contact')}}>
+            <ButtonMenu id="btncontact" onClick={() => {handleChangePage('contact')}} selectedButton={btContact}>
               {page === 'contact' &&
                 <SelectedButton/>
               }
@@ -115,7 +146,7 @@ function App() {
                 se resume a programar. É, antes de tudo, 
                 sobre impactar vidas. A tecnologia mudou 
                 radicalmente nossa existência. 
-                E o que virá em seguida?</p>
+                E o que virá em seguida? Isso eu não sei, mas estarei lá para descobrir!</p>
               }          
 
               {page === 'projects' &&

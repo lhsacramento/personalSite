@@ -29,6 +29,16 @@ export const ApresentationTitle = styled.div`
         color: white;
         margin-left: 1.1rem;
     }
+
+    @media (min-width: 700px) {
+        h1{
+            font-size: 2.5rem;
+        }
+
+        h2{
+            font-size: 1.5rem;
+        }
+    }
 `
 
 export const ContentContainer = styled.div`
@@ -43,17 +53,6 @@ export const MenuContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
-
-    button{
-        width: fit-content;
-        height: fit-content;
-        background-color: transparent;
-        color: white;
-        border: none;
-        cursor: pointer;
-        font-family: roboto;
-        font-size: 1rem;
-    }
 `
 
 export const HomeContainer = styled.div`
@@ -100,20 +99,43 @@ export const HomeContent = styled.div`
     div{
         color: white;
     }
-`
 
-export const ButtonMenu = styled.button`
+    @media (min-width: 700px) {
+        .homeParagraph{
+            max-width: 20rem;
+            font-size: 1.2rem;
+        }
+    }
+`
+interface ButtonProps{
+    selectedButton: boolean;
+}
+
+export const ButtonMenu = styled.button<ButtonProps>`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: roboto;
+    font-size: 1rem;
+    font-weight: ${props => props.selectedButton ? 700 : 100};
 
     &:hover{
         font-weight: bold;
         scale: 1.1;
     }
+
+    @media (min-width: 700px) {        
+        font-size: 1.5rem;
+    }
 `
 
-const myAppear = keyframes`
+const normalApper = keyframes`
     0%,100%{
         opacity: 0;
         translate: 30vw 0;
@@ -127,6 +149,20 @@ const myAppear = keyframes`
     }
 `
 
+const sizedApper = keyframes`
+    0%,100%{
+        opacity: 0;
+        translate: 10vw 0;
+        font-weight: normal;
+    }
+
+    50%{
+        opacity: 1;
+        translate: -10vw 0;
+        font-weight: bold;
+    }
+`
+
 export const SliderContainer = styled.div`
     height: 18rem;
     display: flex;
@@ -134,12 +170,7 @@ export const SliderContainer = styled.div`
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-    ::-webkit-scrollbar{
-        display: none;
-    }
+    scrollbar-color: #FFF transparent;
 `
 
 interface SlideProjectProps{
@@ -152,18 +183,36 @@ export const SlideProject = styled.a<SlideProjectProps>`
     cursor: ${props => props.empty ? 'pointer' : null};
     text-align: right;
     width: 100%;
-    animation: ${myAppear} 1s linear;
-    animation-timeline: view();
     display: block; 
     margin-top: 1rem;
+    
 
     h3{
-            font-size: 1.5rem;
-        }
+        font-size: 1.5rem;
+    }
 
     p{
         width: 100%;
         font-size: 0.5rem;
+    }
+
+    @media (max-width: 699px) {        
+        animation: ${normalApper} 1s linear;   
+        animation-timeline: view();     
+    }
+
+    @media (min-width: 700px) {
+        animation: ${sizedApper} 1s linear; 
+        animation-timeline: view();  
+
+        h3{
+            font-size: 2rem;
+        }
+
+        p{
+            width: 100%;
+            font-size: 1rem;
+        }
     }
 `
 
@@ -182,8 +231,29 @@ export const AboutContainer = styled.div`
     gap: 1rem;
     width: 100%;
     text-align: right;
-
     animation: ${contentApper} 1s linear;
+    scrollbar-color: #FFF transparent;
+
+    strong{
+        font-size: 1.2rem;
+    }
+
+    @media (min-width: 700px){
+        width: 70%;
+
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.5rem;
+
+            strong{
+                font-size: 1.7rem;
+            }
+        }
+
+        
+    }
 `
 
 export const ContactContainer = styled.div`
@@ -203,5 +273,11 @@ export const ContactContainer = styled.div`
     a{
         color: white;
         text-decoration: underline;
+    }
+
+    @media (min-width: 700px) {
+        span,a{
+            font-size: 1.5rem;
+        }
     }
 `
