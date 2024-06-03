@@ -5,6 +5,7 @@ import { AboutContainer, ApresentationTitle, ButtonMenu, ContactContainer,
          SlideProject, SliderContainer} from "./styles/appStyles"
 import { useState } from "react";
 import { LinkedinLogo, GithubLogo, At } from "@phosphor-icons/react";
+import "./styles/background.css";
 
 
 function App() {  
@@ -17,6 +18,60 @@ function App() {
   return (    
     <>
       <GlobalStyles />
+
+      <div className="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
 
       <MainContainer>
         <ApresentationTitle>
