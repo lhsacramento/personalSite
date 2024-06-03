@@ -154,27 +154,27 @@ function App() {
                   <SlideProject> </SlideProject>
                   <SlideProject> </SlideProject>
                   <SlideProject> </SlideProject>
-                  <SlideProject href="https://estudio-pet.vercel.app">
+                  <SlideProject href="https://estudio-pet.vercel.app" target="_blanc">
                     <h3>Estúdio Pet - Site</h3>
                     <p>React + Typescript + Vite + Leaflet (mapas) + Styledcomponent</p>
                   </SlideProject>
-                  <SlideProject href="https://github.com/lhsacramento/personalSite">
+                  <SlideProject href="https://github.com/lhsacramento/personalSite" target="_blanc">
                     <h3>Meu Site</h3>
                     <p>React + Typescript + Vite + Styledcomponent + Animations</p>
                   </SlideProject>
-                  <SlideProject href="https://lh-coffeedelivery.vercel.app">
+                  <SlideProject href="https://lh-coffeedelivery.vercel.app" target="_blanc">
                     <h3>Coffee Delivery</h3>
                     <p>React + Typescript + React-router-dom + React-hook-form + Imask</p>
                   </SlideProject>
-                  <SlideProject href="https://github.com/lhsacramento/DtMoney#">
+                  <SlideProject href="https://github.com/lhsacramento/DtMoney#" target="_blanc">
                     <h3>DT-Money</h3>
                     <p>React + Typescript + Radix + Zod + React-hook-form + Axios + Imask</p>
                   </SlideProject>
-                  <SlideProject href="https://lh-pomotimer.vercel.app">
+                  <SlideProject href="https://lh-pomotimer.vercel.app" target="_blanc">
                     <h3>Pomo-Timer</h3>
                     <p>React + Vite + Typescript + React-router-dom + Date-fns</p>
                   </SlideProject>
-                  <SlideProject href="https://github.com/lhsacramento/KeysController">
+                  <SlideProject href="https://github.com/lhsacramento/KeysController" target="_blanc">
                     <h3>Keys Controller</h3>
                     <p>Flutter + Dart</p>
                   </SlideProject>
