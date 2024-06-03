@@ -78,7 +78,8 @@ export const HomeContent = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     align-items: end;
-    width: 100%;    
+    width: 100%;   
+    max-height : 80%;
 
     .homeParagraph{        
         animation: ${contentApper} 1s linear;
@@ -177,7 +178,6 @@ export const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    max-height: 200px;
     padding: 0 1rem;
     gap: 1rem;
     width: 100%;
