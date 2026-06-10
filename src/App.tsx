@@ -154,7 +154,7 @@ function App() {
                   <SlideProject> </SlideProject>
                   <SlideProject> </SlideProject>
                   <SlideProject> </SlideProject>
-                  <SlideProject href="http://www.restaurantmodel.vercel.app" target="_blanc">
+                  <SlideProject href="https://www.restaurantmodel.vercel.app" target="_blanc">
                   <h3>Sardinha Taberna Portuguesa</h3>
                   <p>React + Typescript + Vite + Styledcomponent</p>
                   </SlideProject>
